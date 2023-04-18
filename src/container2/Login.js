@@ -16,9 +16,7 @@ const auth=getAuth()
       [e.target.name]:e.target.value
     })    
   }
-  signIn=()=>{
-
-  }
+  
   register=()=>{
     createUserWithEmailAndPassword(auth,this.state.username,this.state.password) //passing two states into auth and this auth return a promise.so we use then
         .then((userCredentials)=>{
@@ -29,7 +27,7 @@ const auth=getAuth()
         })      
   }
   signIn=()=>{
-    createUserWithEmailAndPassword(auth,this.state.username,this.state.password)
+    signInWithEmailAndPassword(auth,this.state.username,this.state.password)
       .then((userCredentials)=>{
         console.log("logged in successfully",userCredentials)
       })

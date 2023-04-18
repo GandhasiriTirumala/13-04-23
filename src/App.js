@@ -73,15 +73,15 @@ class App extends Component {
                         <BrowserRouter>
                             <Navbar/>
                                 <Routes>
-                                    <Route path = "/"elememt = { < Home / > }/>
-                                    <Route path = "/login"element = { < Login / > } />
-                                    <Route path = "/todo" element = { < ToDo / > } />
-                                    <Route path = "/logout"element = { < Logout / > } />
-                                    <Route path = "*"element = { < NotFound / > } />
-
+                                    <Route path="/" element={<Home/>}/>
+                                    <Route path="/login" element={<Login/>}/>
+                                    <Route path="/todo" element={<ToDo/>}/>
+                                    <Route path="/logout" element={<Logout/>}/>
+                                    <Route path="*" element={<NotFound/>}/>
                                 </Routes>
                         </BrowserRouter>
-                    ):<Login/>}
+                    ):<Login/>
+                }
             </div>
         )
     }
